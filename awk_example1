@@ -1,0 +1,10 @@
+#!/bin/sh
+# Lists file/dir name and user:group
+# Use: ls -l <dir> | $HOME/bin/awk_example1
+
+awk '
+BEGIN { print "File\t\tOwner" }
+      { print $9, "\t", $3":"$4 }
+END   { print "- DONE -"  }
+    '
+
